@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic styling for the navbar */
+        body ,html{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFDFD6;
+            height: 100%;
+        }
+        .navbar {
+            background-color: #E3A5C7;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #B692C2;
+            color: black;
+        }
+        /* Styling for login and signup buttons */
+        .login-btn, .signup-btn {
+            float: right;
+            width: 100px;
+            height: 50px;
+            margin-right: 20px;
+            margin-top: 15px;
+            background-color: #6EACDA;
+            font-weight: bolder;
+        }
+        .img1 {
+            width: 40px;
+            height: 40px;
+            margin-right: 0px;
+        }
+        .col{
+           font-weight: bolder;
+           color : black;
+        }
+        .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.app-name {
+    color: black;
+    font-size: 24px; /* Adjust as needed */
+    margin: 0;
+    padding: 0;
+    font-weight: bold; /* Make the font bold if desired */
+}
+
+
+.img2{
+    height: 40vh;
+    width:55vh;
+    border-radius: 20px;
+    margin-left: 50px;
+}
+.box-1{
+    height: 50vh;
+    width: 70vh;
+    background-color: #B692C2;
+    align-content: center;
+    border-radius: 20px;
+}
+
+.box-2{
+    height: 50vh;
+    width: 110vh;
+    background-color: #E3A5C7;
+    border-radius: 8px;
+    align-content: center;
+}
+
+.container{
+    display:flex;
+    column-gap: 80px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.description{
+    align-content: center;
+    font-size: large;
+    font-weight: bold;
+    color: darkred;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.head{
+    color: black;
+    font-size: 35px; /* Adjust as needed */
+    margin-top: 10px;
+    padding: 15px;
+    align-content: center;
+    font-weight: bold;
+    color: azure; /* Make the font bold if desired */
+}
+
+.button {
+            border: 2px solid #000;
+            border-radius: 10px;
+            background-color: #694F8E;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            align-content: center;
+            margin-left: 300px;
+        }
+        /* Add hover effect */
+        .button:hover {
+            background-color: #6EACDA; /* Green */
+            color: white;
+        }
+        .head1{
+            color: black;
+    font-size: 35px; /* Adjust as needed */
+    margin-top: 10px;
+    padding: 15px;
+    align-content: center;
+    font-weight: bold;
+   
+        }
+        .header {
+            display: flex;
+            margin-top: 70px;
+            margin-left: 280px;
+            align-items: center;
+            justify-content: center;
+            background-color: coral;
+            padding: 10px;
+            border-radius: 10px;
+            width:50%;
+            height:60px;
+        }
+        .header img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+            color: white;
+        }
+        .btn{
+            border: 2px solid azure;
+            border-radius: 10px;
+            background-color: cadetblue;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            align-content: center;
+            margin-left: 30px;
+        }
+        .desc{
+            margin-left: 280px;
+            margin-top: 40px;
+        }
+        
+        .comments-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top:20px;
+        }
+        .comment {
+            background: #FF7777;
+            padding: 10px;
+            margin-left : 20px;
+            margin-right : 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .comment h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+        }
+        .comment p {
+            margin: 5px 0;
+        }
+        .comment .author {
+            font-weight: bold;
+        }
+        .comment .published-at {
+            font-size: 13px;
+            color: black;
+        }
+        .comment .like-count {
+            color: blue;
+        }
+        .comment .sentiment {
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .comment .positive {
+            color: green;
+        }
+        .comment .negative {
+            color: greenyellow;
+        }
+        .comment .neutral {
+            color: yellow;
+        }
+        .charts-container {
+            margin-top: 30px;
+            column-gap: 20px;
+            position: relative;
+        }
+        .chart {
+            margin-top: 20px;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 600px;
+            height: 60vh;
+            margin-left: 50px;
+        }
+        .total-comments {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        footer {
+    position: relative;
+ 
+    left: 0;
+    bottom: 0;
+    margin-top: 30px;
+    width: 100%;
+    background-color: paleturquoise;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <a><img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon"></a>
+        <a class="navbar-brand">
+            <h1 class="app-name">TubeTalk Metrics</h1>
+        </a>
+        <a href="#"><h3 class = "col"><i class="fas fa-home"></i> Home</h3></a>
+        <a href="{{ url_for('about') }}"><h3 class = "col"><i class="fas fa-user"></i> About</h3></a>
+        <a href="{{ url_for('contact') }}"><h3 class = "col"><i class="fas fa-envelope"></i> Contact</h3></a>
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+    </div>
+    <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      
+    <div class="container">
+    <div class="box-1 img2">
+    <img src="{{ url_for('static', filename='images/emoji_satisfaction_meter_small.jpg') }}" alt="Description" class = "img2">
+    </div>
+    <div class="box-2">
+        <p class="head">
+            “Unlock Insights with Sentiment Analysis”</p>
+     <p class="description"> Discover the emotional pulse of YouTube comments! Our sentiment analysis tool processes user-generated content, revealing sentiments—positive, negative, or neutral. Dive into trends, track brand perception, and gain actionable insights. Whether you are a content creator, marketer, or researcher, harness the power of sentiment analysis to understand audience reactions. Try it now!.
+    </p>
+    <button class="button">Let's Get Started</button>
+    </div>
+</div>
+<div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon">
+    <h1>Youtube Comments Sentiment Analysis Using NLP</h1>
+</div>
+<div>
+    <form method="post">
+        <label for="user_input" class="description desc">Enter Youtube video URL :</label>
+        <input type="text" style="width: 500px; height:40px" width="200" id="video_url" name="video_url" placeholder="Enter YouTube video URL">
+        <button type="submit" class="btn">Show Metrics</button>
+    </form>
+</div>
+
+{% if video_id %}
+
+<iframe src="https://www.youtube.com/embed/{{ video_id }}" style="margin-top: 20px;margin-left: 280px;"height="400" width="800" allowfullscreen></iframe>
+<div class="header">
+    <p>Your Video Got  {{total_comments}} total Comments</p>
+ </div>
+<div><p class="head1" style="margin-left: 340px; ">
+    “Displaying Video Comments Upto 15”</p></div>
+{% endif %}
+
+{% if comments %}
+
+<div class="comments-container">
+    {% for comment in comments %}
+   
+        <div class="comment">
+            <h3>{{ comment.author }}</h3>
+            <p class="published-at">Published at: {{ comment.published_at }}</p>
+            <p>{{ comment.text }}</p>
+            <p class="like-count">Likes: {{ comment.like_count }}</p>
+            <p class="sentiment {{ comment.sentiment | lower }}">{{ comment.sentiment }}</p>
+        </div>
+       
+    {% endfor %}
+</div>
+
+<div class="charts-container">
+   
+    {% if pie_chart_base64 %}
+        <img src="data:image/png;base64,{{ pie_chart_base64 }}" alt="Pie Chart" class="chart">
+    {% endif %}
+    {% if bar_chart_base64 %}
+        <img src="data:image/png;base64,{{ bar_chart_base64 }}" alt="Bar Chart" class="chart">
+    {% endif %}
+</div>
+<div >
+    <p class="head1" style="margin-left: 240px;">The Above Video Got  {{positive_count}} Positive Comments Out Of {{total_comments}} Comments</p>
+ </div>
+
+
+{% endif %}
+<!-- Footer section -->
+<footer>
+    <div>
+        <p>&copy; 2024 TubeTalk Metrics. All rights reserved.</p>
+        <p>Designed by Manvi Chaturvedi</p>
+    </div>
+</footer>
+</body>
+
+</html>

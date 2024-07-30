@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - YouTube Sentiment Analysis App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <header>
+        <h1>About YouTube Sentiment Analysis</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+               
+                <li><a href="/submit_contact_form">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section">
+            <h2>What is YouTube Sentiment Analysis?</h2>
+            <p>This app analyzes sentiments expressed in YouTube comments using natural language processing (NLP) techniques. It provides insights into the general sentiment (positive, negative, neutral) of the comments related to a specific video or topic.</p>
+        </section>
+        <section class="about-section">
+            <h2>How It Works</h2>
+            <p>The app uses a Flask backend to process user requests and interacts with a machine learning model trained on sentiment analysis. When a user inputs a YouTube video URL or keyword, the app fetches relevant comments, analyzes them using the model, and displays the sentiment analysis results.</p>
+        </section>
+        <section class="about-section">
+            <h2>Meet the Developer</h2>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/fce.png.jpg') }}" alt="Developer">
+                <h3>Manvi Chaturvedi</h3>
+                <p>Lead Developer</p>
+            </div>
+           
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 YouTube Sentiment Analysis App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
