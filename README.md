@@ -32,7 +32,7 @@
 ## 📸 Screenshots
 
 > ScreenShots Of UI
-![Screenshot 1](./tubetalkimages/image2.png))  
+![Screenshot 1](./tubetalkimages/image1.png))  
 ![Screenshot 2](./tubetalkimages/image2.png))
 ![Screenshot 3](./tubetalimages/image3.png)
 
