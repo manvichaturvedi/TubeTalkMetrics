@@ -32,7 +32,7 @@
 ## 📸 Screenshots
 
 > ScreenShots Of UI
-![Screenshot 1](./tubetalkimages/Screenshot%202025-04-20%20111225.png))  
+![Screenshot 1](./tubetalkimages/Screenshot%2025-04-20%184321.png))  
 ![Screenshot 2](./assets/Screenshot%202025-04-20%20111251.png))
 ![Screenshot 3](./assets/Screenshot%202025-04-20%20111324.png)
 
