@@ -17,16 +17,12 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
-- React.js / HTML / CSS (or whichever stack you used)
-- Axios for API calls
-- Chart.js or Recharts for sentiment visualization
+- HTML / CSS (or whichever stack you used)
+- flask
+- NLP
 
 ### Backend
-- Node.js with Express **OR** Python with Flask
-- YouTube Data API (v3) for fetching comments
-- NLP tools:
-  - `TextBlob`, `VADER` (Python) or
-  - `natural`, `Sentiment` npm packages (Node)
+- python 
 
 ---
 ## 📸 Screenshots
@@ -40,7 +36,7 @@
 
 ### Prerequisites
 
-- Node.js & npm OR Python 3.x & pip
+- Python 3.x & pip
 - YouTube Data API key
 
 ### Clone the repository
